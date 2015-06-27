@@ -8,7 +8,6 @@ use Proc::Daemon;
 Proc::Daemon::Init;
 
 while(1) {
-	system('cp /home/pi/SeriesReminder/db.bak /home/pi/SeriesReminder/db.txt');
 	open (DATEI, "/home/pi/SeriesReminder/db.txt") or die $!;
 	my @daten = <DATEI>;
 	close (DATEI);
